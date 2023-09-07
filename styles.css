@@ -1,0 +1,9 @@
+/* css styles */
+
+div.error-code-color pre code {
+    color: #ff0000;
+}
+
+div.error-code-bold pre code {
+    font-weight: bold;
+}
