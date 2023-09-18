@@ -1,5 +1,17 @@
 /* css styles */
 
+div.papers img {
+    max-height: 100px;
+}
+
+.reveal pre code {
+    max-height: 80vh;
+}
+
+code {
+    line-height: 100%;
+}
+
 div.error-code-color pre code {
     color: #ff0000;
 }

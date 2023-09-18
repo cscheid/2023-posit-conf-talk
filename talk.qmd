@@ -1,11 +1,10 @@
 ---
 title: 'Making next-generation PDFs with Quarto and `typst`'
 subtitle: Never again in outer par mode
-author: Carlos Scheidegger
+author: Carlos Scheidegger, Software Engineer, Quarto
 format: 
-  revealjs-positslides:
-    filters:
-      - positslides
+  qmdrslides-revealjs:
+    footer: <https://cscheid.net/to/posit-2023.html>
     css: styles.css
 ---
 
@@ -247,35 +246,190 @@ compilation failed- error
 Missing \endcsname inserted.
 ```
 
-## Ok, but what's Typst?
+## ... and I've used LaTeX for 20 years!
 
-An entirely new language for writing documents.
+::: papers
 
-You _could_ use that by itself, but Quarto!
+![](./img/papers/edge_bundling-0.jpg)
+![](./img/papers/edge_bundling-1.jpg)
+![](./img/papers/edge_bundling-2.jpg)
+![](./img/papers/edge_bundling-3.jpg)
+![](./img/papers/edge_bundling-4.jpg)
+![](./img/papers/edge_bundling-5.jpg)
+![](./img/papers/edge_bundling-6.jpg)
+![](./img/papers/edge_bundling-7.jpg)
+![](./img/papers/eg2006-0.jpg)
+![](./img/papers/eg2006-1.jpg)
+![](./img/papers/eg2006-2.jpg)
+![](./img/papers/eg2006-3.jpg)
+![](./img/papers/eg2006-4.jpg)
+![](./img/papers/eg2006-5.jpg)
+![](./img/papers/eg2006-6.jpg)
+![](./img/papers/eg2006-7.jpg)
+![](./img/papers/eg2006-8.jpg)
+![](./img/papers/eg2006-9.jpg)
+![](./img/papers/histogramspaper-0.jpg)
+![](./img/papers/histogramspaper-1.jpg)
+![](./img/papers/histogramspaper-2.jpg)
+![](./img/papers/histogramspaper-3.jpg)
+![](./img/papers/histogramspaper-4.jpg)
+![](./img/papers/histogramspaper-5.jpg)
+![](./img/papers/histogramspaper-6.jpg)
+![](./img/papers/histogramspaper-7.jpg)
+![](./img/papers/infovis_avd_2014-0.jpg)
+![](./img/papers/infovis_avd_2014-1.jpg)
+![](./img/papers/infovis_avd_2014-2.jpg)
+![](./img/papers/infovis_avd_2014-3.jpg)
+![](./img/papers/infovis_avd_2014-6.jpg)
+![](./img/papers/infovis_avd_2014-7.jpg)
+![](./img/papers/infovis_avd_2014-9.jpg)
+![](./img/papers/tpss-0.jpg)
+![](./img/papers/tpss-1.jpg)
+![](./img/papers/tpss-2.jpg)
+![](./img/papers/tpss-3.jpg)
+![](./img/papers/tpss-4.jpg)
+![](./img/papers/tpss-5.jpg)
+![](./img/papers/tpss-6.jpg)
+![](./img/papers/tpss-7.jpg)
+![](./img/papers/tpss-8.jpg)
+![](./img/papers/tpss-9.jpg)
+![](./img/papers/vis_by_analogy-0.jpg)
+![](./img/papers/vis_by_analogy-1.jpg)
+![](./img/papers/vis_by_analogy-2.jpg)
+![](./img/papers/vis_by_analogy-3.jpg)
+![](./img/papers/vis_by_analogy-4.jpg)
+![](./img/papers/vis_by_analogy-5.jpg)
+![](./img/papers/vis_by_analogy-6.jpg)
+![](./img/papers/vis_by_analogy-7.jpg)
+![](./img/papers/vistrails-vis2005-0.jpg)
+![](./img/papers/vistrails-vis2005-1.jpg)
+![](./img/papers/vistrails-vis2005-2.jpg)
+![](./img/papers/vistrails-vis2005-3.jpg)
+![](./img/papers/vistrails-vis2005-4.jpg)
+![](./img/papers/vistrails-vis2005-5.jpg)
+![](./img/papers/vistrails-vis2005-6.jpg)
+![](./img/papers/vistrails-vis2005-7.jpg)
+![](./img/papers/1706.09847-0.jpg)
+![](./img/papers/1706.09847-1.jpg)
+![](./img/papers/1706.09847-2.jpg)
+![](./img/papers/1706.09847-3.jpg)
+![](./img/papers/1706.09847-4.jpg)
+![](./img/papers/1706.09847-5.jpg)
+![](./img/papers/1706.09847-6.jpg)
+![](./img/papers/1706.09847-7.jpg)
+![](./img/papers/1706.09847-9.jpg)
+![](./img/papers/1706.09847-11.jpg)
+![](./img/papers/infovis_dimreader_2018-0.jpg)
+![](./img/papers/infovis_dimreader_2018-1.jpg)
+![](./img/papers/infovis_dimreader_2018-2.jpg)
+![](./img/papers/infovis_dimreader_2018-3.jpg)
+![](./img/papers/infovis_dimreader_2018-4.jpg)
+![](./img/papers/infovis_dimreader_2018-5.jpg)
+![](./img/papers/infovis_dimreader_2018-6.jpg)
+![](./img/papers/infovis_dimreader_2018-7.jpg)
+![](./img/papers/infovis_dimreader_2018-8.jpg)
+![](./img/papers/infovis_dimreader_2018-9.jpg)
+![](./img/papers/infovis_hashed_cubes_2016-1.jpg)
+![](./img/papers/infovis_hashed_cubes_2016-9.jpg)
+![](./img/papers/infovis_looksgoodtome_2018-0.jpg)
+![](./img/papers/infovis_looksgoodtome_2018-1.jpg)
+![](./img/papers/infovis_looksgoodtome_2018-2.jpg)
+![](./img/papers/infovis_looksgoodtome_2018-3.jpg)
+![](./img/papers/infovis_looksgoodtome_2018-4.jpg)
+![](./img/papers/infovis_looksgoodtome_2018-5.jpg)
+![](./img/papers/infovis_looksgoodtome_2018-6.jpg)
+![](./img/papers/infovis_looksgoodtome_2018-7.jpg)
+![](./img/papers/infovis_looksgoodtome_2018-8.jpg)
+![](./img/papers/infovis_looksgoodtome_2018-9.jpg)
+![](./img/papers/nanocubes-0.jpg)
+![](./img/papers/nanocubes-9.jpg)
+:::
 
-Quarto 1.4 provides `typst` as a new output format.
+
+::: {.notes}
+
+I checked, and I've written more than 100 LaTeX documents in my life.
+
+In deep appreciation for the foundational work that two absolute CS legends 
+Don Knuth and Leslie Lamport have done, as well as the thousands of
+brilliant folks building the ecosystems, I'm ready to say that's
+enough LaTeX for a lifetime.
+
+:::
+
+## Hello Typst: <https://typst.app>
+
+![](img/typst-app.jpg)
+
+::: {.notes}
+
+An entirely new system for producing PDF documents.
+
+Quarto 1.4 provides `typst` as a new output format. You still write Markdown,
+but you get a number of very exciting things
+
+:::
 
 ## Why I'm excited about Typst
 
 - Much, *much* better error messages
 
-- No LaTeX dependencies to install
+- Much, *much* easier to write extensions and new templates
 
-- Much easier to write extensions and new templates
+- No LaTeX dependency to install: we bundle `typst` with Quarto
+
+- the other 5%: I will tell you about sharp edges
+
+# Quarto, meet `typst`
+
+::: {.notes}
+
+Show a basic typst document in quarto.
+
+:::
+
+## {.notes}
+
+At the most basic level, replace `pdf` with `typst` in the format, and you're good to go.
+
+##
 
 # Error messages matter
 
-Quarto calls downstream tools directly. When something fails, we either have to fix it ourselves by parsing the error message (mklatex etc) or we report the error.
+::: notes
+
+Quarto calls downstream tools directly. When something fails, 
+we either have to fix it ourselves by parsing the error message (mklatex etc) or we report the error.
 
 We put a _lot_ of effort in producing good error messages, but there's only so much we can do.
+
+:::
 
 # No LaTeX
 
 ## No `tinytex` required: quarto bundles `typst`
 
+::: notes
+
+Locked-down corporate environment? We gotchu fam
+
+:::
+
 ## Typst is fast!
 
+::: notes
+
 One fairly annoying thing about Quarto is that it's kind of slow (acknowledge and mention 2023 speed fixes, as well as 2024). With PDF output from LaTeX, it's that much slower. But Typst is very fast! (Demo.)
+
+:::
+
+## Typst makes typesetting easier
+
+::: notes
+
+Show unicode fonts example in xelatex vs typst
+
+:::
 
 # Extensions
 
@@ -290,3 +444,7 @@ Two-slide demo.
 Talk about error messages in writing extensions. 
 
 Show Typst error messages.
+
+# Sharp edges
+
+## Ecosystem is still not quite there, especially for "custom output"
