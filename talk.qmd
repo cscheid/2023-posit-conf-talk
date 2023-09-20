@@ -392,6 +392,10 @@ it is almost equally easy to define and investigate computable functions
 ## Four tiny demos {.your-turn} 
 
 * Fonts
+
+## Four tiny demos {.your-turn} 
+
+* Fonts
 * Errors
 
 ## Four tiny demos {.your-turn} 
@@ -419,7 +423,12 @@ we either have to fix it ourselves by parsing the error message (mklatex etc) or
 
 :::
 
-# Sharp edges (at least for now)
+# The sharp edges (at least for now)
+
+## The sharp edges (at least for now)
+
+- Table rendering is not great
+- Some Quarto features are not finished
 
 ::: {.notes}
 
@@ -434,12 +443,13 @@ If you, like me, are a die-hard fan of Rich Iannone's `gt` grammar-of-tables lib
 
 ## tl;dw
 
-* `typst` is very new, very cool, and very useful, today
+* `typst` is new, neat, very useful
+* Available in Quarto 1.4 pre-releases
 * I hope it displaces LaTeX
 * (Quarto will still support LaTeX!)
 * You will probably need to do a bit of extra work, but we can help
 
 # Thank you!
 
-- More info: https://quarto.org/docs/prerelease/1.4/typst.html
+- More info: <https://quarto.org/docs/prerelease/1.4/typst.html>
 - More questions? `carlos.scheidegger@posit.co`
