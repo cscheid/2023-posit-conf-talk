@@ -1,0 +1,30 @@
+---
+title: Let's test typst font support
+format: typst
+keep-typ: true
+---
+
+::: {}
+
+```{=typst}
+#set text(font: (
+  "Papyrus",
+  "Noto Sans Arabic",
+))
+```
+
+Blue, and with long ears. \
+هذا عربي.
+
+:::
+
+Note the ligature rendering on the Arabic font!
+
+If your code has some fancy equations, this comes up as well. This is a constant source of trouble in Julia code:
+
+```{{julia}}
+# from https://nextjournal.com/jperkel/julia-on-nextjournal
+r = 5; # radius of a circle
+A = π * r^2;
+C = 2 * π * r;
+```

@@ -1,0 +1,9 @@
+---
+title: typst table test
+format: typst
+---
+
+```{r}
+knitr::kable(mtcars[1:10,])
+```
+

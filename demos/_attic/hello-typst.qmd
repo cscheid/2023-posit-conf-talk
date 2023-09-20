@@ -1,0 +1,13 @@
+---
+title: Hello, Typst
+format: typst
+keep-typ: true
+---
+
+```{r}
+#| label: fig-cars
+#| fig-cap: Some cars!
+plot(cars)
+```
+
+See @fig-cars.

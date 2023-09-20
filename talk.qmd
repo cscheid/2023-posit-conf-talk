@@ -204,47 +204,17 @@ Package typearea Info: You've used standard option `letterpaper'.
 
 :::
 
-## {}
+# This happens often
 
-````
----
-title: "seriously y'all, my report is _the best_"
-format: pdf
----
+True story: this error message came up three separate times for me...
 
-```{{r}}
-#| label: tbl-main_result
-#| tbl-cap: Look at this table. Look at it!
-knitr::kable(my_dataframe)
-```
+::: {.fragment}
 
-You need to see @tbl-main_result.
-````
+::: {style="font-size:2em"}
+since arriving at posit::conf!
+:::
 
-## {}
-
-```
-$ quarto render index.qmd
-```
-
-## {}
-
-```
-$ quarto render index.qmd
-...
-ERROR: 
-compilation failed- error
-```
-
-## {}
-
-```
-$ quarto render index.qmd
-...
-ERROR: 
-compilation failed- error
-Missing \endcsname inserted.
-```
+:::
 
 ## ... and I've used LaTeX for 20 years!
 
@@ -372,79 +342,104 @@ but you get a number of very exciting things
 
 ## Why I'm excited about Typst
 
-- Much, *much* better error messages
-
-- Much, *much* easier to write extensions and new templates
-
-- No LaTeX dependency to install: we bundle `typst` with Quarto
-
-- the other 5%: I will tell you about sharp edges
++----------+---------+---------------------------------------------------------------+
+| Everyone | Experts |                                                               |
++==========+=========+===============================================================+
+| 😍       | 😍      | Much, *much* better error messages                            |
++----------+---------+---------------------------------------------------------------+
+| 😍       |         | No LaTeX dependency to install: we bundle `typst` with Quarto |
++----------+---------+---------------------------------------------------------------+
+|          |  😍     | Much, *much* easier to write extensions and new templates     |
++----------+---------+---------------------------------------------------------------+
+| 😱       |  😱     | Some features are still missing                               |
++----------+---------+---------------------------------------------------------------+
 
 # Quarto, meet `typst`
 
+## You might not have to do anything {auto-animate="true"}
+
+```qmd
+---
+title: On Computable Numbers, With an Application to the _Entscheidungsproblem_
+author: A. M. Turing
+format: pdf
+---
+The "computable" numbers may be described briefly as the real
+numbers whose expressions as a decimal are calculable by finite means.
+Although the subject of this paper is ostensibly the computable numbers,
+it is almost equally easy to define and investigate computable functions
+...
+```
+
+
+## You might not have to do anything {auto-animate=true}
+
+```qmd
+---
+title: On Computable Numbers, With an Application to the _Entscheidungsproblem_
+author: A. M. Turing
+format: typst
+---
+The "computable" numbers may be described briefly as the real
+numbers whose expressions as a decimal are calculable by finite means.
+Although the subject of this paper is ostensibly the computable numbers,
+it is almost equally easy to define and investigate computable functions
+...
+```
+
+## Four tiny demos {.your-turn} 
+
+## Four tiny demos {.your-turn} 
+
+* Fonts
+* Errors
+
+## Four tiny demos {.your-turn} 
+
+* Fonts
+* Errors
+* Posters
+
+## Four tiny demos {.your-turn} 
+
+* Fonts
+* Errors
+* Posters
+* Fancy newsletter
+
 ::: {.notes}
 
-Show a basic typst document in quarto.
-
-:::
-
-## {.notes}
-
 At the most basic level, replace `pdf` with `typst` in the format, and you're good to go.
+Demo this.
 
-##
-
-# Error messages matter
-
-::: notes
+Locked-down corporate environment? We gotchu fam. Show `quarto typst`
 
 Quarto calls downstream tools directly. When something fails, 
-we either have to fix it ourselves by parsing the error message (mklatex etc) or we report the error.
-
-We put a _lot_ of effort in producing good error messages, but there's only so much we can do.
+we either have to fix it ourselves by parsing the error message (mklatex etc) or we report the error. Show this by inserting a bad reference.
 
 :::
 
-# No LaTeX
+# Sharp edges (at least for now)
 
-## No `tinytex` required: quarto bundles `typst`
+::: {.notes}
 
-::: notes
+Ecosystem is still not quite there, especially for "custom output"
 
-Locked-down corporate environment? We gotchu fam
+If you, like me, are a `beamer` veteran, you will need to wait a bit. `polylux` is a `typst` package
+that produces presentations, but Quarto doesn't know how to target it.
 
-:::
-
-## Typst is fast!
-
-::: notes
-
-One fairly annoying thing about Quarto is that it's kind of slow (acknowledge and mention 2023 speed fixes, as well as 2024). With PDF output from LaTeX, it's that much slower. But Typst is very fast! (Demo.)
+If you, like me, are a die-hard fan of Rich Iannone's `gt` grammar-of-tables library, you will need to wait a bit. `typst`'s table support is not as powerful as we need it to be to generate the complex tables which `gt` is famous for.
 
 :::
 
-## Typst makes typesetting easier
+## tl;dw
 
-::: notes
+* `typst` is very new, very cool, and very useful, today
+* I hope it displaces LaTeX
+* (Quarto will still support LaTeX!)
+* You will probably need to do a bit of extra work, but we can help
 
-Show unicode fonts example in xelatex vs typst
+# Thank you!
 
-:::
-
-# Extensions
-
-## Cool things you can do with Quarto+Typst today
-
-https://github.com/quarto-ext/typst-templates
-
-## Do you want to write your own?
-
-Two-slide demo.
-
-Talk about error messages in writing extensions. 
-
-Show Typst error messages.
-
-# Sharp edges
-
-## Ecosystem is still not quite there, especially for "custom output"
+- More info: https://quarto.org/docs/prerelease/1.4/typst.html
+- More questions? `carlos.scheidegger@posit.co`

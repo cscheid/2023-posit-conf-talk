@@ -1,0 +1,326 @@
+---
+title: On Computable Numbers, with an Application to the Entscheidungsproblem
+author: A. M. Turing
+format: pdf
+---
+
+## {.unnumbered}
+
+The "computable" numbers may be described briefly as the real
+numbers whose expressions as a decimal are calculable by finite means.
+Although the subject of this paper is ostensibly the computable numbers,
+it is almost equally easy to define and investigate computable functions
+of an integral variable or a real or computable variable, computable
+predicates, and so forth. The fundamental problems involved are,
+however, the same in each case, and I have chosen the computable numbers
+for explicit treatment as involving the least cumbrous technique. I hope
+shortly to give an account of the relations of the computable numbers,
+functions, and so forth to one another. This will include a development
+of the theory of functions of a real variable expressed in terms of computable numbers. According to my definition, a number is computable
+if its decimal can be written down by a machine.
+
+In §§ 9, 10 I give some arguments with the intention of showing that the
+computable numbers include all numbers which could naturally be
+regarded as computable. In particular, I show that certain large classes
+of numbers are computable. They include, for instance, the real parts of
+all algebraic numbers, the real parts of the zeros of the Bessel functions,
+the numbers $\pi$, $e$, etc. The computable numbers do not, however, include
+all definable numbers, and an example is given of a definable number
+which is not computable.
+
+Although the class of computable numbers is so great, and in many
+Avays similar to the class of real numbers, it is nevertheless enumerable.
+In § 81 examine certain arguments which would seem to prove the contrary.
+By the correct application of one of these arguments, conclusions are
+reached which are superficially similar to those of Gödel (godel). These results have valuable applications. In particular, it is shown (§11) that the
+Hilbertian Entscheidungsproblem can have no solution.
+
+In a recent paper Alonzo Church f has introduced an idea of "effective
+calculability", which is equivalent to my "computability", but is very
+differently defined. Church also reaches similar conclusions about the
+Entscheidungsproblem. The proof of equivalence between "computability" and "effective calculability" is outlined in an appendix to the
+present paper.
+
+## Computing machines
+
+We have said that the computable numbers are those whose decimals
+are calculable by finite means. This requires rather more explicit
+definition. No real attempt will be made to justify the definitions given
+until we reach § 9. For the present I shall only say that the justification
+lies in the fact that the human memory is necessarily limited.
+
+We may compare a man in the process of computing a real number to ;i
+machine which is only capable of a finite number of conditions q1: q2. .... qI;
+which will be called " m-configurations ". The machine is supplied with a
+"tape " (the analogue of paper) running through it, and divided into
+sections (called "squares") each capable of bearing a "symbol". At
+any moment there is just one square, say the r-th, bearing the symbol <2>(r)
+which is "in the machine". We may call this square the "scanned
+square". The symbol on the scanned square may be called the " scanned
+symbol". The "scanned symbol" is the only one of which the machine
+is, so to speak, "directly aware". However, by altering its m-configuration the machine can effectively remember some of the symbols which
+it has "seen" (scanned) previously. The possible behaviour of the
+machine at any moment is determined by the ra-configuration qn and the
+scanned symbol S(r). This pair qn, © (r) will be called the ''configuration'':
+thus the configuration determines the possible behaviour of the machine.
+In some of the configurations in which the scanned square is blank (i.e.
+bears no symbol) the machine writes down a new symbol on the scanned
+square: in other configurations it erases the scanned symbol. The
+machine may also change the square which is being scanned, but only by
+shifting it one place to right or left. In addition to any of these operations
+the m-configuration may be changed. Some of the symbols written down
+will form the sequence of figures which is the decimal of the real number
+which is being computed. The others are just rough notes to "assist the
+memory ". It will only be these rough notes which will be liable to erasure.
+It is my contention that these operations include all those which are used
+in the computation of a number. The defence of this contention will be
+easier when the theory of the machines is familiar to the reader. In the
+next section I therefore proceed with the development of the theory and
+assume that it is understood what is meant by "machine", "tape",
+"scanned", etc.
+
+## Definitions
+
+### Automatic machines
+
+If at each stage the motion of a machine (in the sense of § 1) is completely
+determined by the configuration, we shall call the machine an "automatic machine" (or a-machine).
+
+For some purposes we might use machines (choice machines or
+c-manhines) whose motion is onty partially determined by the configuration
+(hence the use of the word "possible" in §1). When such a machine
+reaches one of these ambiguous configurations, it cannot go on until some
+arbitrary choice has been made by an external operator. This would be the
+case if we were using machines to deal with axiomatic systems. In this
+paper I deal only with automatic machines, and will therefore often omit
+the prefix a-.
+
+### Computing machines
+
+If an a-machine prints two kinds of symbols, of which the first kind
+(called figures) consists entirely of 0 and 1 (the others being called symbols of the second kind), then the machine will be called a computing machine.
+If the machine is supplied with a blank tape and set in motion, starting
+from the correct initial ra-configuration, the subsequence of the sjinbols
+printed by it which are of the first kind will be called the sequence computed
+by the machine. The real number whose expression as a binary decimal is
+obtained by prefacing this sequence by a decimal point is called the
+number computed by the machine.
+At any stage of the motion of the machine, the number of the scanned
+square, the complete sequence of all symbols on the tape, and the
+ra-configuration will be said to describe the complete configuration at that
+stage. The changes of the machine and tape between successive complete
+configurations will be called the moves of the machine.
+
+### Circular and circle-free machines
+
+If a computing machine never writes down more than a finite number
+of symbols of the first kind, it will be called circular. Otherwise it is said to
+be circle-free.
+A machine will be circular if it reaches a configuration from which there
+is no possible move, or if it goes on moving, and possibly printing symbols
+of the second kind, but cannot print any more symbols of the first kind.
+The significance of the term "circular" will be explained in §8.
+
+### Computable sequences and numbers
+
+A sequence is said to be computable if it can be computed by a circle-free
+machine. A number is computable if it differs by an integer from the
+number computed by a circle-free machine.
+We shall avoid confusion by speaking more often of computable
+sequences than of computable numbers
+
+
+## Examples of computing machines
+
+A machine can be constructed to compute the sequence 010101....
+The machine is to have the four m-configurations "b" , "c" , "£" , "c:>
+and is capable of printing " 0 " and " 1 ". The behaviour of the machine is
+described in the following table in which " R " means "the machine moves
+so that it scans the square immediately on the right of the one it was
+scanning previously". Similarly for "L". "E" means "the scanned
+symbol is erased" and "P " stands for "prints". This table (and all
+succeeding tables of the same kind) is to be understood to mean that for
+a configuration described in the first two columns the operations in the
+third column are carried out successively, and the machine then goes over
+into the m-configuration described in the last column. When the second
+column is left blank, it is understood that the behaviour of the third and
+fourth columns applies for any symbol and for no symbol. The machine
+starts in the m-configuration b with a blank tape.
+
+(TODO: Add figure from p.233)
+
+If (contrary to the description in § 1) we allow the letters L, R to appear
+more than once in the operations column we can simplify the table
+considerably
+
+(TODO: Add figure from p.234)
+
+As a slightly more difficult example we can construct a machine to
+compute the sequence 001011011101111011111 The machine is to
+be capable of five ra-configurations, viz. " o ", " q ", "p ", " f ", " b " and of
+printing "o" , "x", "0" , "1" . The first three symbols on the tape will
+be " aoO " ; the other figures follow on alternate squares. On the intermediate squares we never print anything but "x". These letters serve to
+" keep the place " for us and are erased when we have finished with them.
+We also arrange that in the sequence of figures on alternate squares there
+shall be no blanks.
+
+(TODO: Add figure from p.234)
+
+To illustrate the working of this machine a table is given below of the
+first few complete configurations. These complete configurations are
+described by writing down the sequence of symbols which are on the tape,
+with the m-configuration written below the scanned symbol. The
+successive complete configurations are separated by colons.
+
+(TODO: Table)
+
+This table could also be written in the form
+
+(TODO: Equation) 
+
+in which a space has been made on the left of the scanned symbol and the*
+m-configuration written in this space. This form is less easy to follow, but
+we shall make use of it later for theoretical purposes.
+
+The convention of writing the figures only on alternate squares is very
+useful: I shall always make use of it. I shall call the one sequence of alternate squares $F$-squares and the other sequence $E$-squares. The symbols on $E$-squares will be liable to erasure. The symbols on $$F$-squares form a
+continuous sequence. There are no blanks until the end is reached. There
+is no need to have more than one $E$-square between each pair of $F$-squares:
+an apparent need of more $E$-squares can be satisfied by having a sufficiently
+rich variety of symbols capable of being printed on $E$-squares. If a
+symbol $\beta$ is on an $F$-square S and a symbol $a$ is on the $E$-square next on the
+right of S, then S and $\beta$ will be said to be marked with a. The
+process of printing this a will be called marking $\beta$ (or S) with a.
+
+
+## Abbreviated tables
+
+There are certain types of process used by nearly all machines, and.
+these, in some machines, are used in many connections. These processes
+include copying down sequences of symbols, comparing sequences, erasing
+all symbols of a given form, etc. Where such processes are concerned we
+can abbreviate the tables for the m-configurations considerably by the use
+of "skeleton tables". In skeleton tables there appear capital German
+letters and small Greek letters. These are of the nature of "variables '".
+By replacing each capital German letter throughout by an $m$-configuration
+and each small Greek letter by a symbol, we obtain the table for an
+$m$-configuration.
+
+The skeleton tables are to be regarded as nothing but abbreviations:
+they are not essential. So long as the reader understands how to obtain
+the complete tables from the skeleton tables, there is no need to give any
+exact definitions in this connection.
+
+Let us consider an example:
+
+(Figure from p.236)
+
+If we were to replace £ throughout by q (say), 93 by r, and a. by x, we
+should have a complete table for the m-configuration f (q, x, x). f is called
+an "$m$-configuration function" or "$m$-function".
+
+The only expressions which are admissible for substitution in an
+»i-function are the m-configurations and symbols of the machine. These
+have to be enumerated more or less explicitly: they may include expressions
+such as p(c, x); indeed they must if there are any m-functions used at all.
+If we did not insist on this explicit eaumeration, but simply stated that
+the machine had certain m-configurations (enumerated) and all m-configurations obtainable by substitution of m-configurations in certain m-function.-J, we .should usually get an infinity of m-configurations; e.g., we might
+say that the machine was to have the m-configuration q and all m-configurations obtainable by substituting an m-configuration for £ in p(£). Then
+it would have q, p(q), pfp(q)V p(p(p(q))), ... asm-configurations.
+
+Our interpretation rule then is this. We are given the names of the
+^-configurations of the machine, mostly expressed in terms of m-functions.
+We are also given skeleton tables. All we want is the complete table for
+the m-configurations of the machine. This is obtained by repeated
+substitution in the skeleton tables.
+
+### Further examples
+
+(In the explanations the symbol "->" is used to signify "the machine
+goes into the ra-configuration. . . . ")
+
+(TODO: Figure in p.237)
+
+The last example seems somewhat more difficult to interpret than
+most. Let us suppose that in the list of m-configurations of some machine
+there appears c('b, x) ($=q$, say). The table is
+
+(TODO)
+
+Or, in greater detail:
+
+(TODO)
+
+In this we could replace cJL(q, h, x) by q' and then give the table for f (with
+the right substitutions) and eventually reach a table in which no
+m-functions appeared
+
+(TODO)
+
+The last line stands for the totality of lines obtainable from it by
+replacing fi by any symbol which may occur on the tape of the machine
+concerned.
+
+(TODO)
+
+The first symbol marked a and the first marked ]8 are compared. If
+there is neither a nor ft, —> (I\ If there are both and the symbols are alike,
+-> (5. Otherwise -> 21.
+
+(TODO)
+
+cpe(S, 21, S, a, j8) differs from cp(§, 21, £, a, j8) in that in the case when
+there is similarity the first a and /? are erased.
+
+(TODO)
+
+cpe(2I, S, a, j8). The sequence of symbols marked a is compared with
+the sequence marked /?. -> Q if they are similar. Otherwise -> 21. Some
+of the symbols a and /? are erased.
+
+(TODO)
+
+## Enumeration of computable sequences
+
+A computable sequence $\gamma$ is determined by a description of a machine
+which computes $\gamma$. Thus the sequence 001011011101111... is determined
+by the table on p. 234, and, in fact, any computable sequence is capable of
+being described in terms of such a table
+
+It will be useful to put these tables into a kind of standard form. In the
+first place let us suppose that the table is given in the same form as the first
+table, for example, I on p. 233. That is to say, that the entry in the operations column is always of one of the forms E :E,R:E,L:Pa: Pa, R: Pa, L:R:L:
+or no entry at all. The table can always be put into this form by introducing more m-configurations. Now let us give numbers to the w-configurations, calling them qx, ..., qR, as in §1. The initial m-configuration is
+always to be called qv We also give numbers to the symbols $S_1, \ldots, S_m$
+and, in particular, $\textrm{blank} = B_0$, $0 = S_1$, $1 = S_2$. The lines of the table are now of form
+
+(TODO)
+
+In this way we reduce each line of the table to a line of one of the forms
+(Nj, (N2), (iy.
+From each line of form (N let us form an expression q( Sj]Sb L qm;
+from each line of form (N2) we form an expression qiSjSkRqm;
+and from each line of form (N3) we form an expression #,•#, SkNqm.
+Let us write down all expressions so formed from the table for the
+machine and separate them by semi-colons. In this way we obtain a
+complete description of the machine. In this description we shall replace
+q{ by the letter "D" followed by the letter "A" repeated i times, and $,- by
+" D " followed by "C" repeated j times. This new description of the
+machine may be called the standard description (S.D). It is made up
+entirely from the letters "A", " C", "D", "L", "R", "N", and from
+If finally we replace "A" by "1" , "C" by "2" , "D" by "3" , " L"
+by "4" , "R" by c '5" , "N" by "6" , and "*3>
+ by £< 7" we sh,all have a
+description of the machine in the form of an arabic numeral. The integer
+represented by this numeral may be called a description number (D.N) of
+the machine. The D.N determine the S.D and the structure of the
+machine uniquely. The machine whose D.N is n may be described as
+$M(n)$.
+
+To each computable sequence there corresponds at least one description
+number, while to no description number does there correspond more than
+one computable sequence. The computable sequences and numbers are
+therefore enumerable.
+
+Let us find a description number for the machine I of § 3. When we
+rename the m-configurations its table becomes:

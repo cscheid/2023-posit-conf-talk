@@ -1,0 +1,7 @@
+---
+title: Let's cause typst to fail
+format: typst
+---
+
+What if I try to use a missing reference? As I can see in @badcitation, the error is nice.
+
