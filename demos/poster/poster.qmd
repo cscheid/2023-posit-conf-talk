@@ -1,6 +1,7 @@
 ---
 title: This is an academic poster with typst and quarto!
 format:
+  # pdf: default
   poster-typst: 
     size: "36x24"
     poster-authors: "C. Scheidegger, J. J. Allaire, C. Teague"
@@ -52,7 +53,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 `````{=typst}
 #block(
-  fill: luma(230),
+  fill: rgb("#eeeeee"),
   inset: 8pt,
   radius: 4pt,
   [

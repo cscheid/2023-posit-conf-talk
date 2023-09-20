@@ -4,7 +4,7 @@ subtitle: Never again in outer par mode
 author: Carlos Scheidegger, Software Engineer, Quarto
 format: 
   qmdrslides-revealjs:
-    footer: <https://cscheid.net/to/posit-2023.html>
+    footer: "talk: <https://cscheid.net/to/posit-2023.html>, qs: <https://pos.it/slido-ij>"
     css: styles.css
 ---
 
@@ -327,6 +327,14 @@ enough LaTeX for a lifetime.
 
 :::
 
+## tl;dw
+
+* `typst` is new, neat, and very useful
+* Available in Quarto 1.4 pre-releases
+* I hope it displaces LaTeX
+* (Quarto will still support LaTeX!)
+* You will probably need to do a bit of extra work, but we can help
+
 ## Hello Typst: <https://typst.app>
 
 ![](img/typst-app.jpg)
@@ -339,20 +347,6 @@ Quarto 1.4 provides `typst` as a new output format. You still write Markdown,
 but you get a number of very exciting things
 
 :::
-
-## Why I'm excited about Typst
-
-+----------+---------+---------------------------------------------------------------+
-| Everyone | Experts |                                                               |
-+==========+=========+===============================================================+
-| 😍       | 😍      | Much, *much* better error messages                            |
-+----------+---------+---------------------------------------------------------------+
-| 😍       |         | No LaTeX dependency to install: we bundle `typst` with Quarto |
-+----------+---------+---------------------------------------------------------------+
-|          |  😍     | Much, *much* easier to write extensions and new templates     |
-+----------+---------+---------------------------------------------------------------+
-| 😱       |  😱     | Some features are still missing                               |
-+----------+---------+---------------------------------------------------------------+
 
 # Quarto, meet `typst`
 
@@ -391,24 +385,24 @@ it is almost equally easy to define and investigate computable functions
 
 ## Four tiny demos {.your-turn} 
 
-* Fonts
-
-## Four tiny demos {.your-turn} 
-
-* Fonts
-* Errors
-
-## Four tiny demos {.your-turn} 
-
-* Fonts
-* Errors
 * Posters
 
 ## Four tiny demos {.your-turn} 
 
-* Fonts
-* Errors
 * Posters
+* Errors
+
+## Four tiny demos {.your-turn} 
+
+* Posters
+* Errors
+* Fonts
+
+## Four tiny demos {.your-turn} 
+
+* Posters
+* Errors
+* Fonts
 * Fancy newsletter
 
 ::: {.notes}
@@ -452,4 +446,8 @@ If you, like me, are a die-hard fan of Rich Iannone's `gt` grammar-of-tables lib
 # Thank you!
 
 - More info: <https://quarto.org/docs/prerelease/1.4/typst.html>
-- More questions? `carlos.scheidegger@posit.co`
+- This talk: <https://cscheid.net/to/posit-2023.html>
+- Slido questions: <https://pos.it/slido-ij>
+- More questions? 
+  - `@scheidegger@mastodon.social`, 
+  - `carlos.scheidegger@posit.co`
